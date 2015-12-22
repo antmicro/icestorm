@@ -1,9 +1,8 @@
-# CXX = clang
-CXX ?= clang
+CXX = $(CC_PREFIX)g++
 LDLIBS = -lm -lstdc++
 CXXFLAGS = -MD -O0 -ggdb -Wall -std=c++11
 CC = $(CXX)
-DESTDIR = /usr/local
+DESTDIR = $(ROOT_DIR)/icestorm/icemulti/
 
 all: icemulti
 
@@ -22,4 +21,3 @@ clean:
 -include *.d
 
 .PHONY: all install uninstall clean
-

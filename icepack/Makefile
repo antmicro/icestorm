@@ -1,10 +1,10 @@
 # CXX = clang
-CXX ?= clang
+CXX = $(CC_PREFIX)g++
 LDLIBS = -lm -lstdc++
-CXXFLAGS = -MD -O0 -ggdb -Wall -std=c++11 -I/usr/local/include
+CXXFLAGS = -MD -O0 -ggdb -Wall -std=c++11
 MXEGCC = /usr/local/src/mxe/usr/bin/i686-pc-mingw32-gcc
 CC = $(CXX)
-DESTDIR = /usr/local
+DESTDIR = $(ROOT_DIR)/icestorm/icepack/bin
 
 all: icepack iceunpack
 
